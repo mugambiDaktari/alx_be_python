@@ -18,7 +18,7 @@ class BankAccount:
             return True
         
     def display_balance(self):
-        return(f"Current balance is ${self.account_balance}.")
+        return print(f"Current balance is ${self.account_balance}.")
         #return self.account_balance
     
 
