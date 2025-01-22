@@ -25,28 +25,28 @@ class Book:
 
 class Library:
     def __init__(self):
-        self.__books = [] 
+        self._books = [] 
 
     def add_book(self, book):
         if isinstance(book, Book):
-            self.__books.append(book)  
+            self._books.append(book)  
 
     def check_out_book(self, title):
-        for book in self.__books:
+        for book in self._books:
             if book.title == title and not book.is_checked_out():
                 if book.check_out():
                     return f"Book '{title}' has been checked out."
         return f"Book '{title}' is not available."
     
     def return_book(self, title):
-        for book in self.__books:
+        for book in self._books:
             if book.title == title and book.is_checked_out():
                 if book.return_book():
                     return f"Book '{title}' has been returned."
         return f"Book '{title}' was not checked out."
 
     def list_available_books(self):
-     return [f"{book.title} by {book.author}" for book in self.__books if not book.is_checked_out()]
+     return [f"{book.title} by {book.author}" for book in self._books if not book.is_checked_out()]
     
 """ library = Library()
 book1 = Book("1984", "George Orwell")
