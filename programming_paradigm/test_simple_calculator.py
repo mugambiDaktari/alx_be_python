@@ -21,12 +21,12 @@ class TestSimpleCalculator(unittest.TestCase):
         """Test the addition method."""
         self.assertEqual(self.calc.multiply(5, 3), 15)    
 
-    def test_divison_by_zero_returns_none(self):
+    def test_division_by_zero_returns_none(self):
         """Test that division by zero returns None."""
         result = self.calc.divide(10, 0)
         self.assertIsNone(result)  # Check if the result is None
 
-    def test_divison(self):
+    def test_division(self):
         """Test normal division."""
         self.assertEqual(self.calc.divide(10, 2), 5)
 
