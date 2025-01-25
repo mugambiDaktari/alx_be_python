@@ -32,7 +32,7 @@ class PrintBook(Book):
 
 class Library:
     def __init__(self):
-        self.books = []  # Composition: Library "has-a" collection of books
+        self.books = []
 
     def add_book(self, book):
         if isinstance(book, (Book, EBook, PrintBook)):
@@ -40,5 +40,5 @@ class Library:
 
     def list_books(self):
         for book in self.books:
-            print(str(book))  
+            print((book))  
  
